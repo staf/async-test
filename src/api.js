@@ -48,7 +48,7 @@ const Api = {
    * @param   {object} params
    * @returns {Promise<object>}
    */
-  async get(url, params) {
+  async get(url, params = {}) {
     return await Api.request('get', url, params);
   },
 
@@ -57,7 +57,7 @@ const Api = {
    * @param   {object} data
    * @returns {Promise<object>}
    */
-  async post(url, data) {
+  async post(url, data = {}) {
     return await Api.request('post', url, data);
   },
 
@@ -66,7 +66,7 @@ const Api = {
    * @param   {object} data
    * @returns {Promise<object>}
    */
-  async put(url, data) {
+  async put(url, data = {}) {
     return await Api.request('put', url, data);
   },
 
@@ -75,7 +75,7 @@ const Api = {
    * @param   {object} data
    * @returns {Promise<object>}
    */
-  async patch(url, data) {
+  async patch(url, data = {}) {
     return await Api.request('patch', url, data);
   },
 
@@ -84,7 +84,7 @@ const Api = {
    * @param   {object} params
    * @returns {Promise<object>}
    */
-  async delete(url, params) {
+  async delete(url, params = {}) {
     return await Api.request('delete', url, params);
   },
 };
